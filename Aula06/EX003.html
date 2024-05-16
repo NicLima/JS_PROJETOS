@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <style>
+        body {
+            background-color: rgb(105, 105, 173);
+            color: white;
+            font: normal 25pt Arial;
+        }
+        h1 {
+            color:rgb(255, 119, 22);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá mundo! Voltei pra aprender JS dessa ves.</h1>
+    <p>Já me livrei da maldição</p>
+    <script>
+        var n1 = window.prompt('Digite um número:')     //Sempre vem como string.
+        var n2 = window.prompt('Digite outro número:')  //Sempre vem como string.
+        
+        //Converter para número
+        n1 = Number.parseInt(n1)    //número inteiro.
+        n2 = Number.parseFloat(n2)  //número real, com vírgula.
+
+        //Forma simplificada:
+        //n1 = Number(n)    
+        var n3 = n1 + n2
+        //window.alert('A soma do valores ' + n1 + '+ ' + n2 + '= ' + n3)
+
+        //Formatação ECMA utilizando crase - Isso se chama 'template string'
+        window.alert(`A soma dos valores ${n1} + ${n2} é igual a ${n3}`)
+
+        //Converter para string:
+        String(n3)
+        n2.toString()
+
+        //tamanho da string
+        n3.length
+
+        //Converte para letras MAIÚSCULAS
+        n3.toUpperCase()
+        
+        //Converte para letras mínusculas
+        n3.toLowerCase()
+    </script>
+</body>
+</html>
+
+<!-- //Comentários JS
+Declarar variáveis:
+var
+const
+let
+-->
