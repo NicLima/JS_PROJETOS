@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de multas</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    Velocidade do carro: <input type ="number" name="tvel1" id="tvel1"> Km/h
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id='res'>
+
+    </div>
+    <script>
+        function verificar(){    
+            var vel1 = window.document.querySelector('input#tvel1')
+            var res = window.document.querySelector('div#res')
+            var limite = 60
+            vel1 = Number(vel1.value)
+
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel1}Km/h <strong></p> .`
+            res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            if(vel1 > limite){
+                window.alert(`Você ultrapassou o limite de velocidade, MULTADO!`)
+            }
+        }
+    </script>
+</body>
+</html>
